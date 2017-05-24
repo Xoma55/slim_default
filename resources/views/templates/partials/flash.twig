@@ -1,0 +1,27 @@
+{% if flash.getMessage('info') %}
+
+    <div class="callout success" data-closable>
+
+        {{ flash.getMessage('info') | first }}
+
+        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+    </div>
+
+{% endif %}
+
+{% if flash.getMessage('error') %}
+
+    <div class="callout alert" data-closable>
+
+        {{ flash.getMessage('error') | first }}
+
+        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+    </div>
+
+{% endif %}
